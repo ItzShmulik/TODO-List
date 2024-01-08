@@ -13,7 +13,6 @@ body{
 
 .todo-container{
     position: absolute;
-    min-width: 250px;
     width: 30%;
     height: 70%;
     background-color: white;
@@ -21,6 +20,7 @@ body{
     font-family: 'Tahoma';
     padding: 1%;
 }
+
 
 .todo-container h1{
     text-align: center;
@@ -38,7 +38,7 @@ body{
     color: #000;
 }
 
-.add-item-button{
+#add-item-button{
     margin-left: 5%;
     position: absolute;
     width: 14%;
@@ -48,7 +48,7 @@ body{
     border-radius: 5%;
 }
 
-.add-item-button img{
+#add-item-button img{
     width: 75%;
     height: 75%
 }
