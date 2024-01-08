@@ -1,0 +1,54 @@
+html{
+    background: linear-gradient(#e66465, #9198e5);
+    background-attachment: fixed;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    margin: 0;
+    padding-left: 35%;
+    padding-top: 5%;
+}
+
+.todo-container{
+    position: absolute;
+    min-width: 250px;
+    width: 30%;
+    height: 70%;
+    background-color: white;
+    border-radius: 1%;
+    font-family: 'Tahoma';
+    padding: 1%;
+}
+
+.todo-container h1{
+    text-align: center;
+    display: block;
+}
+
+.todo-container input{
+    width: 75%;
+    height: 10%;
+    min-height: 20px;
+    border: #b8b8bf solid 2px;
+    border-radius: 2%;
+    font-size: 30px;
+    padding: 5px;
+    color: #000;
+}
+
+.add-item-button{
+    margin-left: 5%;
+    position: absolute;
+    width: 14%;
+    height: 11.5%;
+    border: transparent;
+    background-color: #a765e6;
+    border-radius: 5%;
+}
+
+.add-item-button img{
+    width: 75%;
+    height: 75%
+}
