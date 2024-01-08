@@ -48,6 +48,12 @@ body{
     border-radius: 5%;
 }
 
+#add-item-button:hover{
+    border: #a765e6 5px solid;
+    background-color: #b17ae6;
+    cursor: pointer;
+}
+
 #add-item-button img{
     width: 75%;
     height: 75%

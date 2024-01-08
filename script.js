@@ -1,7 +1,22 @@
 const addItem_button = document.querySelector("#add-item-button");
+let inputValue = "";
 
-function click(){
-    console.log("Clicked the button!");
+let items = [];
+let itemsCount = 0;
+
+addItem_button.onclick = function(){
+    inputValue = document.getElementById('add-item-input').value;
+    if(!(inputValue == "" || inputValue == undefined)){
+        addItem(inputValue)
+    }
+};
+
+function addItem(itemTitle){
+    
+    items[itemsCount] = itemTitle;
+    itemsCount++;
+    console.log(items);
 }
 
-addItem_button.onclick = click
+
+
