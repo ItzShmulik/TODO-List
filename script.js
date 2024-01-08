@@ -7,14 +7,14 @@ let itemsCount = 0;
 addItem_button.onclick = function(){
     inputValue = document.getElementById('add-item-input').value;
     if(!(inputValue == "" || inputValue == undefined)){
-        addItem(inputValue)
+        addItem(inputValue);
     }
 };
 
 function addItem(itemTitle){
-    
     items[itemsCount] = itemTitle;
     itemsCount++;
+    document.getElementById('add-item-input').value = "";
     console.log(items);
 }
 
