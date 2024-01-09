@@ -16,6 +16,12 @@ function addItem(itemTitle){
     itemsCount++;
     document.getElementById('add-item-input').value = "";
     console.log(items);
+
+    const itemContainer = document.createElement("div");
+    itemContainer.innerText = itemTitle;
+    itemContainer.id = "item-container";
+    document.getElementById("todo-container").appendChild(itemContainer);
+
 }
 
 
