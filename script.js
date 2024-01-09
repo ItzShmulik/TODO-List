@@ -22,6 +22,10 @@ function addItem(itemTitle){
     itemContainer.id = "item-container";
     document.getElementById("todo-container").appendChild(itemContainer);
 
+    const removeButton = document.createElement('button');
+    removeButton.innerText = "Remove";
+    removeButton.id = "remove-button";
+    document.getElementById("item-container").appendChild(removeButton);
 }
 
 
