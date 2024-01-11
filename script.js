@@ -30,6 +30,11 @@ function addItem(itemTitle){
 
     const delItem_button = document.createElement("button");
     delItem_button.id = "del-button";
+
+    delItem_button.onclick = function(){
+        delItem(lastContainer);
+    }
+  
     lastContainer.appendChild(delItem_button);
 
     const lastDelButton = lastContainer.lastElementChild;
@@ -43,3 +48,6 @@ function addItem(itemTitle){
     lastDelButton.appendChild(delItem_img);
 }
 
+function delItem(parent){
+    parent.remove();
+}
