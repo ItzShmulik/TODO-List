@@ -18,15 +18,19 @@ function addItem(itemTitle){
     console.log(items);
 
     const itemContainer = document.createElement("div");
-    itemContainer.innerText = itemTitle;
     itemContainer.id = "item-container";
     document.getElementById("todo-container").appendChild(itemContainer);
 
-    const removeButton = document.createElement('button');
-    removeButton.innerText = "Remove";
-    removeButton.id = "remove-button";
-    document.getElementById("item-container").appendChild(removeButton);
-}
+    const lastContainer = document.getElementById("todo-container").lastElementChild;
 
+    const titleSpan = document.createElement('span');
+    titleSpan.innerText = itemTitle;
+    titleSpan.id = "item-title";
+    lastContainer.appendChild(titleSpan);
+
+    const delItem_button = document.createElement("button");
+    delItem_button.id = "del-button";
+    lastContainer.appendChild(delItem_button);
+}
 
 

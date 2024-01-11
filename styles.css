@@ -67,8 +67,18 @@ body{
     background-color: #f0f0ed;
     border-radius: 2%;
     font-size: 30px;
+    margin-bottom: 10px;
 }
 
-#remove-button{
-    
+#item-title{
+    position: absolute;
+    margin-left: 10px;
+}
+
+#del-button{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    left: 85%;
+    top: 12%;
 }
