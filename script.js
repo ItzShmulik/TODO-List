@@ -31,6 +31,15 @@ function addItem(itemTitle){
     const delItem_button = document.createElement("button");
     delItem_button.id = "del-button";
     lastContainer.appendChild(delItem_button);
-}
 
+    const lastDelButton = lastContainer.lastElementChild;
+
+    console.log(lastDelButton);
+
+    const delItem_img = document.createElement('img');
+    delItem_img.id = "del-img";
+    delItem_img.src="./remove_icon.png";
+    delItem_button.ondragstart = () => {return false};
+    lastDelButton.appendChild(delItem_img);
+}
 
