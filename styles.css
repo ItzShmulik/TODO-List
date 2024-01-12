@@ -75,7 +75,7 @@ body{
     margin-left: 10px;
 }
 
-#del-button{
+.del-button{
     position: relative;
     background-color: transparent;
     border: none;
@@ -86,11 +86,11 @@ body{
     left: 87%;
 }
 
-#item-container:hover #del-button{
+#item-container:hover .del-button{
     background-color: #eb344c;
 }
 
-#item-container:hover #del-button #del-img{
+#item-container:hover .del-button #del-img{
     opacity: 100%;
 }
 

@@ -39,11 +39,12 @@ function addItem(itemTitle){
 
     // Item removal button creation and assignment
     const delItem_button = document.createElement("button");
-    delItem_button.id = "del-button";
+    delItem_button.className = "del-button";
+    delItem_button.id = JSON.stringify(itemsCount);
 
     // When clicking the item removal button call the delItem function
     delItem_button.onclick = function(){
-        delItem(lastContainer);
+        delItem(lastContainer, JSON.parse(delItem_button.id - 1));
     }
   
     lastContainer.appendChild(delItem_button);
@@ -59,16 +60,19 @@ function addItem(itemTitle){
 }
 
 // Function implementation of deleting an item
-function delItem(parent){
+function delItem(parent, buttonIndex){
     parent.remove();
     itemsCount -= 1;
+    items.splice(buttonIndex , 1);
+    localStorage.setItem("items", JSON.stringify(items));
     localStorage.setItem("itemsCount", itemsCount);
 }
 
 // Function implementation of loading the saved data
 function loadData(){
     const itemsCount = localStorage.getItem("itemsCount");
+    const items = JSON.parse(localStorage.getItem("items"));
     for (let index = 0; index < itemsCount; index++) {
-        addItem();
+        addItem(items[index]);
     }
 }
