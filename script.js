@@ -5,6 +5,8 @@ let inputValue = "";
 let items = [];
 let itemsCount = 0;
 
+loadData();
+
 // Call function addItem when clicking the addItem button
 addItem_button.onclick = function(){
     inputValue = document.getElementById('add-item-input').value;
@@ -18,8 +20,9 @@ function addItem(itemTitle){
     // List of all the item containers
     items[itemsCount] = itemTitle;
     itemsCount++;
+    localStorage.setItem("itemsCount", itemsCount);
+    localStorage.setItem("items", JSON.stringify(items));
     document.getElementById('add-item-input').value = "";
-    console.log(items);
 
     // Item containe creation and assignment
     const itemContainer = document.createElement("div");
@@ -58,4 +61,14 @@ function addItem(itemTitle){
 // Function implementation of deleting an item
 function delItem(parent){
     parent.remove();
+    itemsCount -= 1;
+    localStorage.setItem("itemsCount", itemsCount);
+}
+
+// Function implementation of loading the saved data
+function loadData(){
+    const itemsCount = localStorage.getItem("itemsCount");
+    for (let index = 0; index < itemsCount; index++) {
+        addItem();
+    }
 }
