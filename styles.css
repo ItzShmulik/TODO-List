@@ -14,7 +14,8 @@ body{
 #todo-container{
     position: absolute;
     width: 30%;
-    height: 70%;
+    height: fit-content;
+    min-height: 70%;
     background-color: white;
     border-radius: 1%;
     font-family: 'Tahoma';
@@ -29,7 +30,7 @@ body{
 
 #todo-container input{
     width: 75%;
-    height: 10%;
+    height: 57px;
     min-height: 20px;
     border: #b8b8bf solid 2px;
     border-radius: 2%;
@@ -42,8 +43,8 @@ body{
 #add-item-button{
     margin-left: 5%;
     position: absolute;
-    width: 14%;
-    height: 11.5%;
+    width: 80px;
+    height: 70px;
     border: transparent;
     background-color: #a765e6;
     border-radius: 5%;
