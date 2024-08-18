@@ -1,5 +1,6 @@
 // Initial Variables
 const addItem_button = document.querySelector("#add-item-button");
+const addInput = document.getElementById('add-item-input');
 let inputValue = "";
 
 let items = [];
@@ -7,9 +8,17 @@ let itemsCount = 0;
 
 loadData();
 
+addInput.addEventListener("keydown", (e) => {
+    inputValue = addInput.value;
+    if(e.key == "Enter" && !(inputValue == "" || inputValue == undefined)){
+        console.log("Pressed Enter")
+        addItem(inputValue);
+    }
+});
+
 // Call function addItem when clicking the addItem button
 addItem_button.onclick = function(){
-    inputValue = document.getElementById('add-item-input').value;
+    inputValue = addInput.value;
     if(!(inputValue == "" || inputValue == undefined)){
         addItem(inputValue);
     }
